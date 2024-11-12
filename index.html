@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Figtree:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 </head>
 <body>
-    <div class="bg-image"></div>
+    <div class="bg-image" id="bg-image"></div>
     <div class="right-bar">
         <nav class="navbar fixed-right">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -33,24 +35,69 @@
                     <li class="nav-item">
                         <a>Music <i class="fa-solid fa-angle-right"></i></a>
                     </li>
+                    <li class="nav-item">
+                        <a>Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>About <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a>News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>EVENTS <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a>EVENTS <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a>Gold</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>press</a>
+                    </li>
                 </ul>
-                <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-twitch"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-spotify"></i>
+                </div>
+                <div class="sign">
+                    <a class="sign-in">SIGN IN</a>
+                    <a class="sign-up">OR SIGN UP</a>
+                </div>
                 </div>
             </div>
         </nav>
+        <div class="vertical-icons">
+            <i class="fa-brands fa-instagram vertical-icon"></i>
+            <i class="fa-brands fa-tiktok vertical-icon"></i>
+            <i class="fa-brands fa-x-twitter vertical-icon"></i>
+            <i class="fa-brands fa-twitch vertical-icon"></i>
+            <i class="fa-brands fa-facebook vertical-icon"></i>
+            <i class="fa-brands fa-discord vertical-icon"></i>
+            <i class="fa-brands fa-spotify vertical-icon"></i>
+        </div>
+        <div class="logo">
+            <img src="img/j.png">
+        </div>
     </div>
     <div class="container  filterBlur">
         <div class="cover-song">
             <div class="space"></div>
-            <div class="row gap-2 justify-content-between">
-                <img src="img/1600w-_bB_o4a7jdE.webp" class="col-lg-5">
+            <div class="row gap-2 justify-content-around">
+                <img src="img/1600w-_bB_o4a7jdE.webp" class="col-lg-5" id="cover-song-image">
                 <div class="col-lg-5 d-flex flex-column justify-content-center">
                     <div class="space-small"></div>
-                    <h1 class="cover-song-name text-light">Keep it simple</h1>
-                    <h2 class="text-light conro">Conro</h2>
+                    <h1 class="cover-song-name text-light" id="cover-song-name">Keep it simple</h1>
+                    <h2 class="text-light conro" id="cover-song-artist">Conro</h2>
                     <div class="buttons">
                         <button type="button" class="listen-button" >
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16" >
@@ -66,11 +113,109 @@
                 </div>
             </div>
         </div>
+        <div class="song-list">
+            <h1 class="song-list-title">Track List</h1>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">1</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img\1600w-_bB_o4a7jdE.webp" class="song-img">
+
+                    <div class="song-detail">
+                        <div class="song-name">The Small Things</div>
+                        <div class="song-artist">Conro</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">3:32</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">2</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img/starman.jpeg" class="song-img">
+                    <div class="song-detail">
+                        <div class="song-name">Starman</div>
+                        <div class="song-artist">David Bowe</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">4:14</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">3</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img/bendandbreak.png" class="song-img">
+                    <div class="song-detail">
+                        <div class="song-name">Bend & Break</div>
+                        <div class="song-artist">Keane</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">3:00</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">4</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img/OdeToMets.jpeg" class="song-img">
+
+                    <div class="song-detail">
+                        <div class="song-name">Ode To Mets</div>
+                        <div class="song-artist">The Strokes</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">4:12</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">5</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img/Muse.jpg" class="song-img">
+
+                    <div class="song-detail">
+                        <div class="song-name">Butterflies & Hurricanes</div>
+                        <div class="song-artist">Muse</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">5:02</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+            <div class="song">
+                <div class="song-left">
+                    <div class="song-number">6</div>
+                    <i class="play-icon" data-state="play"></i> <!-- Changed id to class -->
+                    <img src="img/instantCrush.jpg" class="song-img">
+
+                    <div class="song-detail">
+                        <div class="song-name">Instant Crush</div>
+                        <div class="song-artist">Daft Punk</div>
+                    </div>
+                </div>
+                <div class="song-right">
+                    <div class="song-time">5:29</div>
+                    <i class="bi bi-share"></i>
+                </div>
+            </div>
+        </div>
     </div>
     
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/620f487299.js" crossorigin="anonymous"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>

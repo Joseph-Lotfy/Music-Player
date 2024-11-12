@@ -3,18 +3,27 @@
     src: url('fonts/MonumentExtended-Regular.otf') format('opentype');
     font-weight: normal;
 }
-
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('fonts/MonumentExtended-Regular.otf') format('opentype');
+    font-weight: lighter;
+}
 @font-face {
     font-family: 'MonumentExtended';
     src: url('fonts/MonumentExtended-Ultrabold.otf') format('opentype');
     font-weight: bold;
 }
+a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
 html{
     width: 100vw;
-
+    -webkit-font-smoothing: antialiased;
 }
 body{
-    height: 189vh;
+
     width: 100vw;
     padding: 0;
     margin: 0;
@@ -26,15 +35,39 @@ body{
 }
 
 .right-bar{
-    position: absolute !important;
+    position: fixed !important;
     width: fit-content !important;
     z-index: 100 !important;
     right: 40px;
     color: white !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-bar i{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.vertical-icons{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-top: 50px;
+}
+.vertical-icon{
+    width: 21.5px;
+    display: flex !important; 
+    justify-content: center;
+}
+.logo{
+    display: none;
 }
 .navbar .navbar-toggler-icon{
     color: white !important;
     border: none;
+}
+.navbar .fa-solid {
+    margin-bottom: 0 !important;
 }
 .navbar-toggler{
     border: none !important;
@@ -45,17 +78,73 @@ body{
 .offcanvas{
     background-color: black;
     color: white;
+    padding: 20px;
 }
 .offcanvas-header{
     justify-content: space-between;
+    padding-bottom: 0;
 }
 .offcanvas-title{
-    font-size: 2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
 .close-button{
     border: none;
     background-color: transparent;
     color: white !important;
+}
+.offcanvas-body{
+    display: flex;
+    flex-direction: column;
+}
+.nav-item{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.icons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.icons i{
+    font-size: 18px;
+}
+.sign{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.sign-in{
+    border: 1px white solid;
+    padding: 5px 20px;
+    width: fit-content;
+}
+@media screen and (width < 1100px) {
+    .right-bar{
+        width: 100vw !important;
+        background-color: black;
+        right: 0;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .vertical-icons{
+        flex-direction: row;
+        margin-top: 0;
+    }
+    .vertical-icon{
+        margin-bottom: 0 !important;
+        margin-right: 10px;
+    }
+    .logo{
+        display: block;
+    }
+    .logo img{
+        width: 50px;
+    }
+}
+@media screen and (width < 450px) {
+    .vertical-icons{
+        display: none;
+    }
 }
 .bg-image{
     background: url(img/1600w-_bB_o4a7jdE.webp), linear-gradient(transparent, black 100%);
@@ -87,7 +176,7 @@ body{
 
 }
 .space-small{
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 .cover-song-name{
     height: fit-content;
@@ -143,3 +232,68 @@ body{
         letter-spacing: 1px;
     }
 }
+.song-list{
+    color: white !important;
+    margin-top: 80px;
+    padding-inline: 50px;
+}
+.song-list-title{
+    margin-bottom: 70px;
+}
+.song{
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+.song-left{
+    display: flex;
+    gap: 30px;
+}
+.song-number{
+
+    display: flex;
+    align-items: center;
+}
+.song-img{
+    width: 40px;
+    display: none;
+}
+
+.play-icon svg{
+    width: 30px !important;
+    cursor: pointer;
+}
+.song-name{
+    font-size: 0.9rem;
+}
+.song-artist{
+    font-size: 0.7rem;
+}
+.song-right{
+    display: flex;
+    margin-right: 100px;
+    gap: 50px;
+}
+@media screen and (width < 600px){
+    .song-right i{
+        display: none;
+    }
+    .song-list{
+        padding: 10px;
+    }
+    .song-right{
+        margin-right: 0px;
+    }
+}
+@media screen and (width < 1000px){
+    .song-list{
+        padding: 10px;
+    }
+    .song-right{
+        margin-right: 10px;
+    }
+}
+path {
+    stroke: #ffffff;
+  }
